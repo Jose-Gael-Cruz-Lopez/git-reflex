@@ -196,3 +196,7 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 81. `WS race/:roomId` authenticated upgrades + first-to-correct logic
 82. Persist race results
 
+**EPIC: Team / education dashboards** `social`
+83. Cohort progress dashboard for bootcamps/managers
+84. Team accounts + roles
+
