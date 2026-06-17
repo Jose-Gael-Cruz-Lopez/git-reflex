@@ -62,3 +62,5 @@ Practice history renders as **GitHub-style green squares + a heatmap**, derived 
 
 Legend: ⚡ = contains refinement work. Each issue carries its domain/type labels and milestone; child issues reference their epic.
 
+### Phase 0 · Prove
+
