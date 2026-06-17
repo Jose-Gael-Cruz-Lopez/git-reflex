@@ -154,3 +154,16 @@ Epics: Multiplayer races [#101](../../issues/101) · Team/edu dashboards [#105](
 
 ---
 
+## Key cross-track dependencies
+
+The frontend can't get ahead of the engine and data layer. The hard gates:
+
+- **Solve-loop UI** (#11–19) needs the **git engine** (#3–9) first.
+- **Session recap** (#31) needs **Leitner** (#26–28) + the **anonymous store** (#30).
+- **Interactive hero** (#34) reuses the **engine** via a shared module (#6).
+- **Streaks / dashboard / commit-graph** (#65, #67, #68) need **auth + data model + `review_log`** (#46, #50, #53).
+- **Offline review** (#96) needs the **`review_log` sync** design (#53).
+- **Gauntlet UI** (#98–99) needs the expanded **disaster content** (#71); its **leaderboard** (#100) needs aggregation (#83).
+- **Cohort dashboard** (#106) needs **team accounts** (#107).
+
+⚡ = `retention-refinement` work (disaster hook, interactive hero, commit-graph, challenge + gauntlet modes).
