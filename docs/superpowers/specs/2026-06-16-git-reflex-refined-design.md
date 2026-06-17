@@ -157,3 +157,10 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 
 ### Phase 2 · Grow
 
+**EPIC: Server sandbox (advanced ops)** `infra`
+60. Cloudflare-brokered isolated git runtime
+61. Sandbox security: allowlist, no network, resource/time caps, fresh FS per attempt
+62. `/v1/validate` broker endpoint
+63. Route advanced-track problems to the sandbox
+64. Cache results by `(problem, command)`
+
