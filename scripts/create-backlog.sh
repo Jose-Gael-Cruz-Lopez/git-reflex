@@ -20,3 +20,24 @@ lbl growth d93f0b "Acquisition / retention loops"
 lbl social 1d76db "Sharing, leaderboards, multiplayer"
 lbl retention-refinement b60205 "New retention / attention work"
 
+echo "==> Milestones"
+ms() { gh api -X POST "repos/$REPO/milestones" -f title="$1" -f description="$2" >/dev/null 2>&1 || true; }
+ms "Phase 0 · Prove"   "In-browser engine + solve loop + seed content (free, proves the idea)."
+ms "Phase 1 · Retain"  "Accounts, RLS, FSRS scheduling, streaks, commit-graph."
+ms "Phase 2 · Grow"    "Server sandbox, leaderboards, sharing, community content, gauntlet."
+ms "Phase 3 · Network" "Multiplayer races, team/edu dashboards, community authoring, CLI/extension."
+
+P0="Phase 0 · Prove"; P1="Phase 1 · Retain"; P2="Phase 2 · Grow"; P3="Phase 3 · Network"
+
+# epic <title> <labels> <milestone> <body>  -> echoes the new issue number
+epic() { gh issue create --repo "$REPO" --title "$1" --label "$2" --milestone "$3" --body "$4" | grep -oE '[0-9]+$'; }
+# child <title> <labels> <milestone> <epicnum> <body>
+child() {
+  gh issue create --repo "$REPO" --title "$1" --label "$2" --milestone "$3" \
+    --body "Part of #$4
+
+$5" >/dev/null
+  echo "  + $1"
+}
+
+#############################################
