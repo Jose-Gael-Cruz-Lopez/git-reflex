@@ -50,3 +50,15 @@ Epics: Solve-loop UI [#10](../../issues/10) · Landing + interactive hero [#32](
 
 Epics: Motivation & commit-graph [#64](../../issues/64) · Settings & accessibility [#73](../../issues/73)
 
+#### Phase 2 · Grow
+| # | Order | Issue | Depends on |
+|---|------|-------|-----------|
+| [#95](../../issues/95) | 1 | Installable PWA + service worker | Phase 1 done |
+| [#96](../../issues/96) | 2 | Offline review queue + replay | #95, data #53 |
+| [#98](../../issues/98) | 3 | Gauntlet session type + scoring ⚡ | content #71 |
+| [#99](../../issues/99) | 4 | Gauntlet timer + lives/survival ⚡ | #98 |
+| [#88](../../issues/88) | 5 | "Can you solve it?" challenge cards ⚡ | social #87 |
+| [#89](../../issues/89) | 6 | Achievements / mastery badges | data #50 |
+
+Epics: PWA & offline [#94](../../issues/94) · Gauntlet [#97](../../issues/97) · Social & sharing [#86](../../issues/86)
+
