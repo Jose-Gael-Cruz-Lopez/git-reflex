@@ -45,3 +45,9 @@ Practice history renders as **GitHub-style green squares + a heatmap**, derived 
 
 ## 3. Backlog structure
 
+### Milestones (one per phase)
+- **Phase 0 · Prove** — in-browser engine + solve loop + seed content (free, proves the idea).
+- **Phase 1 · Retain** — accounts, RLS, FSRS scheduling, streaks, commit-graph.
+- **Phase 2 · Grow** — server sandbox, leaderboards, sharing, community content, gauntlet.
+- **Phase 3 · Network** — multiplayer races, team/edu dashboards, community authoring, CLI/extension.
+
