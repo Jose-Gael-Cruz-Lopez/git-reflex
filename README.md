@@ -15,3 +15,5 @@ Two parallel tracks. The **backend track** (git engine, data, scheduling, infra)
 > **Start here (shared foundation — unblocks both tracks):**
 > [#42](../../issues/42) Scaffold React + Vite (+lint/test) → [#43](../../issues/43) Cloudflare Pages deploy → [#44](../../issues/44) OSS hygiene (README/LICENSE/CONTRIBUTING). Epic: [#41](../../issues/41).
 
+### Frontend track
+
