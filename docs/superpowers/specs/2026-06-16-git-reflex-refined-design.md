@@ -74,3 +74,14 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 7. Reset to starting state
 8. Engine error handling + friendly nudges for invalid input
 
+**EPIC: Solve-loop UI** `frontend`
+9. Terminal drill component (type → Enter → feedback)
+10. Live repo-state readout (branch, log, tree status) above the prompt
+11. Multi-command sequences with in-place state updates
+12. Hint reveal (subcommand nudge)
+13. Show idiomatic solution (counts as a miss)
+14. Reset control
+15. "Which solves it?" warm-up multiple-choice mode
+16. Commit-history node strip (run record, green/red)
+17. Keyboard-first loop + sub-second transitions
+
