@@ -96,3 +96,7 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 23. Weighted card picker (lower boxes appear more often)
 24. Mastery = box 5 surfacing
 
+**EPIC: Anonymous progress** `data`
+25. IndexedDB/localStorage anonymous progress store
+26. Session recap (accuracy, streak, box distribution, weakest tracks)
+
