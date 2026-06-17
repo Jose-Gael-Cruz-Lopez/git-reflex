@@ -118,3 +118,8 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 
 ### Phase 1 · Retain
 
+**EPIC: Accounts & auth** `infra`
+37. Supabase project + Auth (magic link + GitHub/Google OAuth)
+38. supabase-js client + RLS-guarded reads/writes
+39. Anonymous → account migration (replay `review_log`)
+
