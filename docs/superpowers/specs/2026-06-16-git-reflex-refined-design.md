@@ -147,3 +147,8 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 54. Lifetime dashboard & history (mastery over time, retention rate)
 55. ⚡ Commit-graph history (green squares + heatmap)
 
+**EPIC: Content depth** `content`
+56. Expand to 100–150 problems + difficulty tiers
+57. ⚡ Expand the "oh no" disaster track
+58. Solution-quality grading polish (flag destructive routes)
+
