@@ -191,3 +191,8 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 
 ### Phase 3 · Network
 
+**EPIC: Multiplayer solve-races** `social`
+80. Durable Object race rooms + realtime coordination
+81. `WS race/:roomId` authenticated upgrades + first-to-correct logic
+82. Persist race results
+
