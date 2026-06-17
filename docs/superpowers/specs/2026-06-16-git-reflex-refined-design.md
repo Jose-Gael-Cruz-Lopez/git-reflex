@@ -111,3 +111,8 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 32. Core components (buttons, terminal, cards)
 33. Reduced-motion + accessibility baseline
 
+**EPIC: Project setup & CI** `infra`
+34. Scaffold React + Vite (PWA-ready) app + lint/test
+35. Cloudflare Pages deploy for the SPA
+36. Open-source hygiene: README, LICENSE, CONTRIBUTING
+
