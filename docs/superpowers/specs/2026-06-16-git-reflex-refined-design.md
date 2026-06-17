@@ -123,3 +123,9 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 38. supabase-js client + RLS-guarded reads/writes
 39. Anonymous → account migration (replay `review_log`)
 
+**EPIC: Data model & persistence** `data`
+40. Postgres migrations: all core tables
+41. RLS own-row policies on learner tables
+42. Seed content into Postgres
+43. `review_log` as source of truth + `user_card_state` recompute
+
