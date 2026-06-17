@@ -93,3 +93,28 @@ Epic: Team / education dashboards [#105](../../issues/105)
 
 Epics: In-browser git engine [#1](../../issues/1) · Seed content [#20](../../issues/20) · Leitner SR [#25](../../issues/25) · Anonymous progress [#29](../../issues/29)
 
+#### Phase 1 · Retain
+| # | Order | Issue | Depends on |
+|---|------|-------|-----------|
+| [#46](../../issues/46) | 1 | Supabase project + Auth (magic link/OAuth) | — |
+| [#50](../../issues/50) | 2 | Postgres migrations: all core tables | #46 |
+| [#51](../../issues/51) | 3 | RLS own-row policies | #50 |
+| [#47](../../issues/47) | 4 | supabase-js client + RLS reads/writes | #51 |
+| [#52](../../issues/52) | 5 | Seed content into Postgres | #50, content #24 |
+| [#53](../../issues/53) | 6 | `review_log` SoT + `user_card_state` recompute | #50 |
+| [#48](../../issues/48) | 7 | Anonymous → account migration | #53, data #30 |
+| [#55](../../issues/55) | 8 | FSRS memory model | #53 |
+| [#56](../../issues/56) | 9 | Solve → FSRS rating mapping | #55, engine #7 |
+| [#57](../../issues/57) | 10 | Daily queue construction | #55 |
+| [#58](../../issues/58) | 11 | `get_due_queue` RPC | #57, #51 |
+| [#60](../../issues/60) | 12 | Worker API scaffold (JWT verify + rate limit) | #46 |
+| [#63](../../issues/63) | 13 | KV namespace (public decks + flags) | #60 |
+| [#61](../../issues/61) | 14 | `/v1/decks` + `/v1/decks/:id/cards` | #60, #63 |
+| [#62](../../issues/62) | 15 | `/v1/migrate` endpoint | #60, #48 |
+| [#66](../../issues/66) | 16 | Optional reminder email | #46 |
+| [#70](../../issues/70) | 17 | Expand to 100–150 problems | content #21 |
+| [#71](../../issues/71) | 18 | Expand "oh no" disaster track ⚡ | #23 |
+| [#72](../../issues/72) | 19 | Solution-quality grading polish | engine #7 |
+
+Epics: Accounts & auth [#45](../../issues/45) · Data model [#49](../../issues/49) · FSRS scheduling [#54](../../issues/54) · Workers API + KV [#59](../../issues/59) · Content depth [#69](../../issues/69)
+
