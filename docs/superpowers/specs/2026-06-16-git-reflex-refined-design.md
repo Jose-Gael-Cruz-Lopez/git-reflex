@@ -141,3 +141,9 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 50. `/v1/migrate` endpoint
 51. KV namespace: public decks + feature flags
 
+**EPIC: Motivation & commit-graph ⚡** `growth`
+52. Streaks + daily goal + streak counter
+53. Optional reminder email
+54. Lifetime dashboard & history (mastery over time, retention rate)
+55. ⚡ Commit-graph history (green squares + heatmap)
+
