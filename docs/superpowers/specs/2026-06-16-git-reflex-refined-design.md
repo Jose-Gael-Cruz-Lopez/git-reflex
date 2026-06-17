@@ -184,3 +184,8 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 75. Installable PWA + service worker (app shell + active deck)
 76. Offline review queue (IndexedDB) + replay on reconnect
 
+**EPIC: Gauntlet / survival mode ⚡** `growth`
+77. ⚡ Gauntlet session type + escalating-disaster scoring
+78. ⚡ Gauntlet timer + lives/survival logic
+79. ⚡ Gauntlet leaderboard
+
