@@ -216,3 +216,6 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 - Milestone split: Phase 0 · Prove (44) · Phase 1 · Retain (30) · Phase 2 · Grow (26) · Phase 3 · Network (13).
 - **13** issues tagged `retention-refinement` (4 epics + 9 child issues): the disaster track, interactive hero, disaster copy, commit-graph history, challenge cards, gauntlet (×3), the disaster-track expansion, plus the Landing/Motivation/Social/Gauntlet epics.
 
+## 6. Sequencing principle (from the spec)
+
+Ship value at every phase; each phase is independently shippable. The engine (the special part) ships first — but only the free in-browser slice. Then retention, then growth, then network effects. The costly server sandbox waits until problems actually demand it.
