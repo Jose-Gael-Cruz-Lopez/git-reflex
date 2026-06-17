@@ -34,3 +34,6 @@ The landing-page terminal becomes **live**. A visitor solves one curated real pr
 - Requires factoring the WASM engine into a **shared module** the marketing page lazy-loads.
 - On first solve → "start solving" CTA into a full track.
 
+### 2.3 Commit-graph history `retention-refinement`
+Practice history renders as **GitHub-style green squares + a heatmap**, derived from `review_log`. Identity-driven retention; instantly shareable. The in-session "your run draws a commit history" node strip (already in the spec) is the seed of this surface.
+
