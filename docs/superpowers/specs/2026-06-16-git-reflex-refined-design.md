@@ -106,3 +106,8 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 29. ⚡ Disaster-first positioning + copy
 30. "See how it works" demo flow
 
+**EPIC: Design system foundation** `design`
+31. Design tokens (color, type ramp, radius/shadow/spacing)
+32. Core components (buttons, terminal, cards)
+33. Reduced-motion + accessibility baseline
+
