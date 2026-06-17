@@ -210,3 +210,9 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 
 ---
 
+## 5. Counts
+
+- **25 epics**, **88 child issues** → **113 issues total**, across **4 milestones**.
+- Milestone split: Phase 0 · Prove (44) · Phase 1 · Retain (30) · Phase 2 · Grow (26) · Phase 3 · Network (13).
+- **13** issues tagged `retention-refinement` (4 epics + 9 child issues): the disaster track, interactive hero, disaster copy, commit-graph history, challenge cards, gauntlet (×3), the disaster-track expansion, plus the Landing/Motivation/Social/Gauntlet epics.
+
