@@ -129,3 +129,9 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 42. Seed content into Postgres
 43. `review_log` as source of truth + `user_card_state` recompute
 
+**EPIC: FSRS scheduling** `engine`
+44. FSRS memory model (stability / difficulty / due / state)
+45. Solve → FSRS rating mapping (easy/good/hard/again)
+46. Daily queue construction (due + new cap, interleave, session cap, overflow)
+47. `get_due_queue` RPC
+
