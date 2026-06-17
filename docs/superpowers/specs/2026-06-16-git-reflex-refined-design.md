@@ -204,3 +204,9 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 85. Full authoring tools + problem versioning
 86. Broader moderation + governance
 
+**EPIC: CLI + browser extension** `growth`
+87. CLI companion: drill in the terminal
+88. Browser extension: "explain this command" + drill-this
+
+---
+
