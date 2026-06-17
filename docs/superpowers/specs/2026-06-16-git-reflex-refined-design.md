@@ -155,3 +155,5 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 **EPIC: Settings & accessibility** `design`
 59. Settings: reduced motion, keyboard map, font size, theme, data export
 
+### Phase 2 · Grow
+
