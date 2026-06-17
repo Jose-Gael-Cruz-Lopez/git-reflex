@@ -71,3 +71,25 @@ Epic: Team / education dashboards [#105](../../issues/105)
 
 ### Backend track
 
+#### Phase 0 · Prove
+| # | Order | Issue | Depends on |
+|---|------|-------|-----------|
+| [#2](../../issues/2) | 1 | Spike: wasm-git vs isomorphic-git | — |
+| [#3](../../issues/3) | 2 | Build repo from `setup[]` in a Web Worker | #2 |
+| [#4](../../issues/4) | 3 | Parse typed input into git invocations | #2 |
+| [#5](../../issues/5) | 4 | Execute parsed commands | #3, #4 |
+| [#6](../../issues/6) | 5 | Goal-assertion evaluator | #5 |
+| [#7](../../issues/7) | 6 | Solution grading (solved/idiomatic/clumsy) | #6 |
+| [#8](../../issues/8) | 7 | Reset to starting state | #3 |
+| [#9](../../issues/9) | 8 | Error handling + friendly nudges | #4 |
+| [#21](../../issues/21) | 9 | Problem JSON schema + validator | — |
+| [#22](../../issues/22) | 10 | Author ~45 seed problems | #21, #6 |
+| [#23](../../issues/23) | 11 | Author "oh no" disaster track ⚡ | #21, #6 |
+| [#24](../../issues/24) | 12 | Content loader + content-hashing | #21 |
+| [#26](../../issues/26) | 13 | Leitner 5-box state model | — |
+| [#27](../../issues/27) | 14 | Weighted card picker | #26 |
+| [#28](../../issues/28) | 15 | Mastery = box 5 surfacing | #26 |
+| [#30](../../issues/30) | 16 | Anonymous progress store (IndexedDB) | #26 |
+
+Epics: In-browser git engine [#1](../../issues/1) · Seed content [#20](../../issues/20) · Leitner SR [#25](../../issues/25) · Anonymous progress [#29](../../issues/29)
+
