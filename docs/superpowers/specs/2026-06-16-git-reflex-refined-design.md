@@ -64,3 +64,13 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 
 ### Phase 0 · Prove
 
+**EPIC: In-browser git engine** `engine`
+1. **spike:** evaluate `wasm-git` (libgit2) vs `isomorphic-git` for command coverage
+2. Build a repo from a problem's `setup[]` steps inside a Web Worker
+3. Parse typed input into discrete git invocations; reject/nudge non-git input
+4. Execute parsed commands against the built repo
+5. Goal-assertion evaluator (refs, working-tree cleanliness, index, file content)
+6. Solution grading: `solved` / `idiomatic` / `clumsy` + idiomatic match
+7. Reset to starting state
+8. Engine error handling + friendly nudges for invalid input
+
