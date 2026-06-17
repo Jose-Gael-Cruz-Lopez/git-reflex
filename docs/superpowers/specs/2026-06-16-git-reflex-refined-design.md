@@ -85,3 +85,9 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 16. Commit-history node strip (run record, green/red)
 17. Keyboard-first loop + sub-second transitions
 
+**EPIC: Seed content & authoring** `content`
+18. Problem JSON schema + validator
+19. Author ~45 seed problems across 7 tracks
+20. ⚡ Author the "oh no" disaster track (featured)
+21. Content loader + content-hashing
+
