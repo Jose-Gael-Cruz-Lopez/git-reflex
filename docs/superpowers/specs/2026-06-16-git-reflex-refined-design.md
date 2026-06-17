@@ -29,3 +29,8 @@ The "oh no" recovery track is promoted from a difficulty-3 afterthought to the *
 - Author ~8–10 disaster scenarios: force-push recovery, lost commit via reflog, detached HEAD, committed-to-wrong-branch, hard-reset recovery, bad merge, accidental `git clean`, dropped stash.
 - Cheap to build (mostly content + copy), highest virality ceiling.
 
+### 2.2 Interactive 10-second hero `retention-refinement`
+The landing-page terminal becomes **live**. A visitor solves one curated real problem by typing — before any signup or navigation. Time-to-aha drops to seconds.
+- Requires factoring the WASM engine into a **shared module** the marketing page lazy-loads.
+- On first solve → "start solving" CTA into a full track.
+
