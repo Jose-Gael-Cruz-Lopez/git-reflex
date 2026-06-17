@@ -371,3 +371,48 @@ child "[social] Gauntlet leaderboard" "feature,social,retention-refinement" "$P2
 **AC:** per-period board; bot-protected; shareable."
 
 #############################################
+echo "==> Phase 3 epics"
+
+E=$(epic "[EPIC] Multiplayer solve-races" "epic,social" "$P3" \
+"Real-time rooms where players race to the correct command; first to solve wins the round.")
+echo "Races epic #$E"
+child "[infra] Durable Object race rooms + realtime coordination" "feature,infra" "$P3" "$E" \
+"A Durable Object per room for consistent state.
+**AC:** room lifecycle; players join/leave; authoritative round state."
+child "[infra] WS race/:roomId authenticated upgrades + first-to-correct" "feature,infra" "$P3" "$E" \
+"Authenticated WebSocket upgrades; first correct solve wins.
+**AC:** auth on upgrade; winner determination is race-safe."
+child "[data] Persist race results" "feature,data" "$P3" "$E" \
+"Store round outcomes.
+**AC:** results persisted to Postgres; feed leaderboards."
+
+E=$(epic "[EPIC] Team / education dashboards" "epic,social" "$P3" \
+"Cohort progress for bootcamps and engineering managers.")
+echo "Team epic #$E"
+child "[frontend] Cohort progress dashboard" "feature,frontend" "$P3" "$E" \
+"Aggregate progress for a cohort/team.
+**AC:** per-member mastery; weak-track rollups."
+child "[infra] Team accounts + roles" "feature,infra" "$P3" "$E" \
+"Team membership and role-based access.
+**AC:** invite members; roles enforced via RLS/Worker."
+
+E=$(epic "[EPIC] Community authoring pipeline" "epic,content" "$P3" \
+"Open-ended authoring: full tooling, versioning, and governance.")
+echo "Authoring epic #$E"
+child "[content] Full authoring tools + problem versioning" "feature,content" "$P3" "$E" \
+"In-app authoring with version history.
+**AC:** authors create/edit problems; versions never silently change a player's history."
+child "[content] Broader moderation + governance" "feature,content" "$P3" "$E" \
+"Scale moderation beyond a single queue.
+**AC:** roles, reporting, and review SLAs defined."
+
+E=$(epic "[EPIC] CLI + browser extension" "epic,growth" "$P3" \
+"Meet developers where they are: drill in the terminal and explain commands in the browser.")
+echo "CLI/ext epic #$E"
+child "[growth] CLI companion: drill in the terminal" "feature,growth" "$P3" "$E" \
+"Run drills from the command line.
+**AC:** install + auth; solve problems in the terminal; syncs progress."
+child "[growth] Browser extension: 'explain this command' + drill-this" "feature,growth" "$P3" "$E" \
+"Explain a git command on any page and offer a matching drill.
+**AC:** extension explains a selected command; deep-links to a relevant problem."
+
