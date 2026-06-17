@@ -200,3 +200,7 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 83. Cohort progress dashboard for bootcamps/managers
 84. Team accounts + roles
 
+**EPIC: Community authoring pipeline** `content`
+85. Full authoring tools + problem versioning
+86. Broader moderation + governance
+
