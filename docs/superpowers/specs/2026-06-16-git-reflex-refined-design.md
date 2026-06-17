@@ -189,3 +189,5 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 78. ⚡ Gauntlet timer + lives/survival logic
 79. ⚡ Gauntlet leaderboard
 
+### Phase 3 · Network
+
