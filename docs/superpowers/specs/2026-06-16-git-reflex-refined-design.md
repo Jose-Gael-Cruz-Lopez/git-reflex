@@ -175,3 +175,8 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 70. ⚡ "Can you solve it?" challenge cards + deep links
 71. Achievements / mastery badges
 
+**EPIC: Community content** `content`
+72. `content_submissions` schema + submit flow (`/v1/content` + Turnstile)
+73. Review queue + moderation
+74. Attribution display
+
