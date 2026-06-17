@@ -17,3 +17,26 @@ Two parallel tracks. The **backend track** (git engine, data, scheduling, infra)
 
 ### Frontend track
 
+#### Phase 0 · Prove
+| # | Order | Issue | Depends on |
+|---|------|-------|-----------|
+| [#38](../../issues/38) | 1 | Design tokens | — |
+| [#39](../../issues/39) | 2 | Core components (buttons, terminal, cards) | #38 |
+| [#40](../../issues/40) | 3 | Reduced-motion + accessibility baseline | #39 |
+| [#11](../../issues/11) | 4 | Terminal drill component | #39, engine #5 |
+| [#12](../../issues/12) | 5 | Live repo-state readout | engine #3–5 |
+| [#13](../../issues/13) | 6 | Multi-command sequences | #11, engine #5 |
+| [#14](../../issues/14) | 7 | Hint reveal | #11 |
+| [#15](../../issues/15) | 8 | Show idiomatic solution | #11, engine #7 |
+| [#16](../../issues/16) | 9 | Reset control | #11, engine #8 |
+| [#17](../../issues/17) | 10 | "Which solves it?" warm-up | #11 |
+| [#18](../../issues/18) | 11 | Commit-history node strip | #11 |
+| [#19](../../issues/19) | 12 | Keyboard-first loop + sub-second transitions | #11 |
+| [#31](../../issues/31) | 13 | Session recap | engine #26–28, data #30 |
+| [#33](../../issues/33) | 14 | Landing page | #39 |
+| [#34](../../issues/34) | 15 | Interactive 10-second hero ⚡ | #33, engine #6 |
+| [#35](../../issues/35) | 16 | Disaster-first positioning + copy ⚡ | #33 |
+| [#36](../../issues/36) | 17 | "See how it works" demo flow | #33 |
+
+Epics: Solve-loop UI [#10](../../issues/10) · Landing + interactive hero [#32](../../issues/32) · Design system [#37](../../issues/37)
+
