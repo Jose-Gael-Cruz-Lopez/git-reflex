@@ -284,3 +284,90 @@ child "[design] Settings: reduced motion, keyboard map, font size, theme, data e
 **AC:** all settings persist; data export produces the user's review_log."
 
 #############################################
+echo "==> Phase 2 epics"
+
+E=$(epic "[EPIC] Server sandbox (advanced ops)" "epic,infra" "$P2" \
+"A Cloudflare-brokered isolated runtime running stock git for the advanced operations the browser engine can't cover. Deferred until problems demand it.")
+echo "Sandbox epic #$E"
+child "[infra] Cloudflare-brokered isolated git runtime" "feature,infra" "$P2" "$E" \
+"Run stock git in an isolated environment for advanced ops (interactive rebase, exotic reflog).
+**AC:** brokered invocation; returns resulting state."
+child "[infra] Sandbox security: allowlist, no network, resource caps, fresh FS" "feature,infra" "$P2" "$E" \
+"git subcommands from an allowlist only; CPU/memory/time caps; fresh isolated FS per attempt.
+**AC:** no network; caps enforced; no cross-attempt leakage."
+child "[infra] /v1/validate broker endpoint" "feature,infra" "$P2" "$E" \
+"Validate advanced-track solves server-side; browser handles the rest.
+**AC:** request {problemId,commands} -> {solved,idiomatic,resultState}."
+child "[engine] Route advanced-track problems to the sandbox" "feature,engine" "$P2" "$E" \
+"Per-problem engine flag ('browser' | 'sandbox') decides the path.
+**AC:** browser default; sandbox only when required."
+child "[infra] Cache results by (problem, command)" "feature,infra" "$P2" "$E" \
+"Cache sandbox outcomes to cut cost.
+**AC:** identical (problem,command) served from cache."
+
+E=$(epic "[EPIC] Leaderboards" "epic,social" "$P2" \
+"Aggregated, bot-protected boards computed off the hot path.")
+echo "Leaderboard epic #$E"
+child "[data] leaderboard_entries + per-period schema" "feature,data" "$P2" "$E" \
+"Store entries per period (weekly etc.).
+**AC:** schema + indexes; RLS for reads."
+child "[infra] Aggregation via Queues/Durable Objects + KV snapshots" "feature,infra" "$P2" "$E" \
+"Aggregate off the hot path; snapshot to KV for fast reads.
+**AC:** no contended rows; periodic snapshots via Cron."
+child "[infra] /v1/leaderboard endpoint" "feature,infra" "$P2" "$E" \
+"Serve aggregated, cached boards.
+**AC:** ?period=week works; edge-cached."
+child "[social] Global & friends boards + Turnstile bot protection" "feature,social" "$P2" "$E" \
+"Global and friends views; protect against bots.
+**AC:** friends scoping; Turnstile on write paths."
+
+E=$(epic "[EPIC] Social & sharing + challenge cards" "epic,social,retention-refinement" "$P2" \
+"Make sharing automatic and turn fumbles into dares.")
+echo "Social epic #$E"
+child "[social] Shareable recap card image (R2/Workers)" "feature,social" "$P2" "$E" \
+"Auto-generate a screenshot-worthy result image.
+**AC:** image generated to R2; OG tags for social unfurls."
+child "[social] 'Can you solve it?' challenge cards + deep links" "feature,social,retention-refinement" "$P2" "$E" \
+"Recap becomes a dare aimed at a friend, deep-linking to a specific problem.
+**AC:** deep link opens the exact problem; attribution; works without an account."
+child "[social] Achievements / mastery badges" "feature,social" "$P2" "$E" \
+"Track completion, perfect sessions, shareable badges.
+**AC:** achievements awarded + displayed; shareable."
+
+E=$(epic "[EPIC] Community content" "epic,content" "$P2" \
+"Let players propose problems, with review and attribution.")
+echo "Community-content epic #$E"
+child "[content] content_submissions schema + submit flow (/v1/content + Turnstile)" "feature,content" "$P2" "$E" \
+"Capture community-proposed scenarios.
+**AC:** submit endpoint guarded by Turnstile; stored for review."
+child "[content] Review queue + moderation" "feature,content" "$P2" "$E" \
+"Moderate submissions before publishing.
+**AC:** queue with approve/reject; published problems versioned."
+child "[content] Attribution display" "feature,content" "$P2" "$E" \
+"Credit authors of accepted problems.
+**AC:** attribution shown on community problems."
+
+E=$(epic "[EPIC] PWA & offline" "epic,frontend" "$P2" \
+"Installable app with offline review that syncs on reconnect.")
+echo "PWA epic #$E"
+child "[frontend] Installable PWA + service worker (app shell + active deck)" "feature,frontend" "$P2" "$E" \
+"Cache the app shell and the active deck.
+**AC:** installable; works offline for review."
+child "[frontend] Offline review queue (IndexedDB) + replay on reconnect" "feature,frontend" "$P2" "$E" \
+"Queue reviews offline; replay the log on reconnect.
+**AC:** offline reviews persist and sync deterministically."
+
+E=$(epic "[EPIC] Gauntlet / survival mode" "epic,growth,retention-refinement" "$P2" \
+"A timed run of escalating disasters with its own leaderboard — the competitive, screenshot-worthy mode.")
+echo "Gauntlet epic #$E"
+child "[frontend] Gauntlet session type + escalating-disaster scoring" "feature,frontend,retention-refinement" "$P2" "$E" \
+"A distinct run of increasingly hard problems with a score.
+**AC:** escalating difficulty; score recorded; uses the disaster track."
+child "[frontend] Gauntlet timer + lives/survival logic" "feature,frontend,retention-refinement" "$P2" "$E" \
+"Time pressure and lives; run ends on time-out or lives lost.
+**AC:** timer + lives enforced; clean end-of-run summary."
+child "[social] Gauntlet leaderboard" "feature,social,retention-refinement" "$P2" "$E" \
+"Dedicated board for gauntlet scores.
+**AC:** per-period board; bot-protected; shareable."
+
+#############################################
