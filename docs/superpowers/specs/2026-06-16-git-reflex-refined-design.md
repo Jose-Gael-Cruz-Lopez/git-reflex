@@ -135,3 +135,9 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 46. Daily queue construction (due + new cap, interleave, session cap, overflow)
 47. `get_due_queue` RPC
 
+**EPIC: Workers API + KV** `infra`
+48. Worker API scaffold: JWT verify (JWKS) + rate limit
+49. `/v1/decks` + `/v1/decks/:id/cards` (KV edge cache)
+50. `/v1/migrate` endpoint
+51. KV namespace: public decks + feature flags
+
