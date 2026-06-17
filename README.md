@@ -40,3 +40,13 @@ Two parallel tracks. The **backend track** (git engine, data, scheduling, infra)
 
 Epics: Solve-loop UI [#10](../../issues/10) · Landing + interactive hero [#32](../../issues/32) · Design system [#37](../../issues/37)
 
+#### Phase 1 · Retain
+| # | Order | Issue | Depends on |
+|---|------|-------|-----------|
+| [#65](../../issues/65) | 1 | Streaks + daily goal + counter | auth #46, data #50 |
+| [#67](../../issues/67) | 2 | Lifetime dashboard & history | data #53 |
+| [#68](../../issues/68) | 3 | Commit-graph history (green squares) ⚡ | data #53 |
+| [#74](../../issues/74) | 4 | Settings & accessibility | #40 |
+
+Epics: Motivation & commit-graph [#64](../../issues/64) · Settings & accessibility [#73](../../issues/73)
+
