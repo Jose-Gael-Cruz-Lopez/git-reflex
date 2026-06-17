@@ -118,3 +118,23 @@ Epics: In-browser git engine [#1](../../issues/1) · Seed content [#20](../../is
 
 Epics: Accounts & auth [#45](../../issues/45) · Data model [#49](../../issues/49) · FSRS scheduling [#54](../../issues/54) · Workers API + KV [#59](../../issues/59) · Content depth [#69](../../issues/69)
 
+#### Phase 2 · Grow
+| # | Order | Issue | Depends on |
+|---|------|-------|-----------|
+| [#76](../../issues/76) | 1 | Cloudflare-brokered isolated git runtime | infra #60 |
+| [#77](../../issues/77) | 2 | Sandbox security (allowlist, caps, fresh FS) | #76 |
+| [#78](../../issues/78) | 3 | `/v1/validate` broker endpoint | #77 |
+| [#79](../../issues/79) | 4 | Route advanced problems to sandbox | #78, engine #6 |
+| [#80](../../issues/80) | 5 | Cache results by (problem, command) | #78 |
+| [#82](../../issues/82) | 6 | `leaderboard_entries` schema | data #50 |
+| [#83](../../issues/83) | 7 | Aggregation via Queues/DO + KV snapshots | #82 |
+| [#84](../../issues/84) | 8 | `/v1/leaderboard` endpoint | #83 |
+| [#85](../../issues/85) | 9 | Global & friends boards + Turnstile | #84 |
+| [#87](../../issues/87) | 10 | Shareable recap card image (R2/Workers) | infra #60 |
+| [#100](../../issues/100) | 11 | Gauntlet leaderboard ⚡ | #83, frontend #98 |
+| [#91](../../issues/91) | 12 | `content_submissions` schema + submit flow | data #50 |
+| [#92](../../issues/92) | 13 | Review queue + moderation | #91 |
+| [#93](../../issues/93) | 14 | Attribution display | #92 |
+
+Epics: Server sandbox [#75](../../issues/75) · Leaderboards [#81](../../issues/81) · Social & sharing [#86](../../issues/86) · Community content [#90](../../issues/90)
+
