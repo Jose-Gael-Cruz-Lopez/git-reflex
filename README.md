@@ -62,3 +62,10 @@ Epics: Motivation & commit-graph [#64](../../issues/64) · Settings & accessibil
 
 Epics: PWA & offline [#94](../../issues/94) · Gauntlet [#97](../../issues/97) · Social & sharing [#86](../../issues/86)
 
+#### Phase 3 · Network
+| # | Order | Issue | Depends on |
+|---|------|-------|-----------|
+| [#106](../../issues/106) | 1 | Cohort progress dashboard | infra #107 |
+
+Epic: Team / education dashboards [#105](../../issues/105)
+
