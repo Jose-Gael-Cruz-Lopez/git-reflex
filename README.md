@@ -138,3 +138,19 @@ Epics: Accounts & auth [#45](../../issues/45) · Data model [#49](../../issues/4
 
 Epics: Server sandbox [#75](../../issues/75) · Leaderboards [#81](../../issues/81) · Social & sharing [#86](../../issues/86) · Community content [#90](../../issues/90)
 
+#### Phase 3 · Network
+| # | Order | Issue | Depends on |
+|---|------|-------|-----------|
+| [#102](../../issues/102) | 1 | Durable Object race rooms | infra #60 |
+| [#103](../../issues/103) | 2 | `WS race/:roomId` + first-to-correct | #102 |
+| [#104](../../issues/104) | 3 | Persist race results | #103, data #50 |
+| [#107](../../issues/107) | 4 | Team accounts + roles | #51 |
+| [#109](../../issues/109) | 5 | Full authoring tools + versioning | content #21 |
+| [#110](../../issues/110) | 6 | Broader moderation + governance | #92 |
+| [#112](../../issues/112) | 7 | CLI companion: drill in the terminal | engine #6, API #61 |
+| [#113](../../issues/113) | 8 | Browser extension: explain + drill-this | content #21 |
+
+Epics: Multiplayer races [#101](../../issues/101) · Team/edu dashboards [#105](../../issues/105) · Community authoring [#108](../../issues/108) · CLI + extension [#111](../../issues/111)
+
+---
+
