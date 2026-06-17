@@ -170,3 +170,8 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 67. `/v1/leaderboard` endpoint
 68. Global & friends boards + Turnstile bot protection
 
+**EPIC: Social & sharing + challenge cards ⚡** `social`
+69. Shareable recap card image (R2/Workers)
+70. ⚡ "Can you solve it?" challenge cards + deep links
+71. Achievements / mastery badges
+
