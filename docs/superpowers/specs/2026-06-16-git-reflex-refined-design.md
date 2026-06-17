@@ -18,3 +18,7 @@ The architectural keystone (from the spec): the git execution engine lives at th
 
 ---
 
+## 2. Refinements (the new value layer)
+
+These four refinements layer on top of the existing spec. They target the two weakest dimensions of the original: **grabbing attention** and **bringing people back**.
+
