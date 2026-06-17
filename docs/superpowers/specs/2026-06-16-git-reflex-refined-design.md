@@ -91,3 +91,8 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 20. ⚡ Author the "oh no" disaster track (featured)
 21. Content loader + content-hashing
 
+**EPIC: Leitner spaced repetition (in-session)** `engine`
+22. Leitner 5-box state model
+23. Weighted card picker (lower boxes appear more often)
+24. Mastery = box 5 surfacing
+
