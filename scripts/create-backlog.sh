@@ -184,3 +184,103 @@ child "[documentation] Open-source hygiene: README, LICENSE, CONTRIBUTING" "docu
 **AC:** README pitch + setup; OSI license; CONTRIBUTING + content-authoring guide."
 
 #############################################
+echo "==> Phase 1 epics"
+
+E=$(epic "[EPIC] Accounts & auth" "epic,infra" "$P1" \
+"Supabase Auth issues JWTs; user data flows through supabase-js under RLS. Anonymous progress migrates on sign-up.")
+echo "Auth epic #$E"
+child "[infra] Supabase project + Auth (magic link + GitHub/Google OAuth)" "feature,infra" "$P1" "$E" \
+"Stand up Supabase, enable auth providers.
+**AC:** magic link + GitHub/Google sign-in working; JWTs issued."
+child "[data] supabase-js client + RLS-guarded reads/writes" "feature,data" "$P1" "$E" \
+"Wire the client for direct, RLS-enforced access to user data.
+**AC:** reads/writes scoped to auth.uid(); no service role on the client."
+child "[data] Anonymous -> account migration (replay review_log)" "feature,data" "$P1" "$E" \
+"On first sign-up, POST the local review_log to a Worker; recompute user_card_state.
+**AC:** merge is exact and idempotent; local progress preserved."
+
+E=$(epic "[EPIC] Data model & persistence" "epic,data" "$P1" \
+"Relational core in Postgres; user tables protected by RLS; content world-readable. review_log is the immutable source of truth.")
+echo "Data-model epic #$E"
+child "[data] Postgres migrations: all core tables" "feature,data" "$P1" "$E" \
+"decks, cards, card_versions, profiles, user_card_state, review_log, sessions, session_items, streaks.
+**AC:** migrations apply cleanly; indexes on review_log(user_id,reviewed_at) and user_card_state(user_id,due)."
+child "[data] RLS own-row policies on learner tables" "feature,data" "$P1" "$E" \
+"Per-user isolation enforced in the database.
+**AC:** users can only touch their own rows; content readable by anon+authenticated."
+child "[chore] Seed content into Postgres" "chore,data" "$P1" "$E" \
+"Load the authored problem set into decks/cards.
+**AC:** seed script idempotent; matches /content/*.json."
+child "[data] review_log source-of-truth + user_card_state recompute" "feature,data" "$P1" "$E" \
+"Treat review_log as immutable; derive user_card_state as a cache.
+**AC:** state recomputable from log; trigger or sync keeps cache fresh; deterministic merges."
+
+E=$(epic "[EPIC] FSRS scheduling" "epic,engine" "$P1" \
+"Graduate from Leitner to FSRS: per-card stability/difficulty, due dates at a target retention, daily queues.")
+echo "FSRS epic #$E"
+child "[engine] FSRS memory model" "feature,engine" "$P1" "$E" \
+"Stability, difficulty, due, reps, lapses, state per card.
+**AC:** model updates after each review; next due set at target retention (~90%)."
+child "[engine] Solve -> FSRS rating mapping" "feature,engine" "$P1" "$E" \
+"Map how the solve went to again/hard/good/easy (clean+fast=easy; hint/clumsy=hard; reveal/fail=again).
+**AC:** mapping matches spec table; reveal counts as a miss."
+child "[engine] Daily queue construction" "feature,engine" "$P1" "$E" \
+"Due cards (oldest first) + up to N new/day; interleave tracks; cap session; carry overflow.
+**AC:** queue respects caps; tracks interleaved; overflow carried to tomorrow."
+child "[data] get_due_queue RPC" "feature,data" "$P1" "$E" \
+"Supabase RPC returning due + new cards for today.
+**AC:** RLS-safe; honors per-user daily_goal."
+
+E=$(epic "[EPIC] Workers API + KV" "epic,infra" "$P1" \
+"Thin Cloudflare Worker API: JWT verify at the edge, rate limiting, edge-cached public decks.")
+echo "Workers epic #$E"
+child "[infra] Worker API scaffold: JWT verify (JWKS) + rate limit" "feature,infra" "$P1" "$E" \
+"Base Worker that verifies Supabase JWTs against JWKS and rate-limits per IP/user.
+**AC:** invalid tokens rejected; limits enforced at the edge."
+child "[infra] /v1/decks + /v1/decks/:id/cards (KV edge cache)" "feature,infra" "$P1" "$E" \
+"Serve public, content-hashed decks/cards from KV.
+**AC:** edge-cached; near-free global reads."
+child "[infra] /v1/migrate endpoint" "feature,infra" "$P1" "$E" \
+"Import an anonymous review_log on sign-up (used by account migration).
+**AC:** inserts under new user_id; idempotent."
+child "[infra] KV namespace: public decks + feature flags" "chore,infra" "$P1" "$E" \
+"Hot config + cached public decks.
+**AC:** namespace provisioned; flags readable at the edge."
+
+E=$(epic "[EPIC] Motivation & commit-graph" "epic,growth,retention-refinement" "$P1" \
+"Reasons to come back: streaks, a lifetime dashboard, and practice history rendered as GitHub-style green squares.")
+echo "Motivation epic #$E"
+child "[frontend] Streaks + daily goal + streak counter" "feature,frontend" "$P1" "$E" \
+"Daily goal, streak count, 'due now' surfacing.
+**AC:** streak increments on a qualifying day; daily goal user-adjustable."
+child "[infra] Optional reminder email" "feature,infra" "$P1" "$E" \
+"Opt-in nudge to keep the streak.
+**AC:** opt-in only; unsubscribe; sent via Cron."
+child "[frontend] Lifetime dashboard & history" "feature,frontend" "$P1" "$E" \
+"Mastery over time, review heatmap, retention rate.
+**AC:** reads from review_log; per-track breakdown."
+child "[frontend] Commit-graph history (green squares + heatmap)" "feature,frontend,retention-refinement" "$P1" "$E" \
+"Render practice history as a GitHub-style contribution graph derived from review_log.
+**AC:** per-day intensity squares; shareable; ties into the in-session node strip."
+
+E=$(epic "[EPIC] Content depth" "epic,content" "$P1" \
+"Grow the problem set and difficulty tiers; keep the disaster track expanding.")
+echo "Content-depth epic #$E"
+child "[content] Expand to 100-150 problems + difficulty tiers" "content" "$P1" "$E" \
+"Beginner -> advanced across all tracks.
+**AC:** 100-150 problems; tiers tagged; each tested against idiomatic + clumsy routes."
+child "[content] Expand the 'oh no' disaster track" "content,retention-refinement" "$P1" "$E" \
+"More recovery scenarios to deepen the hook.
+**AC:** additional robustly-asserted disaster problems."
+child "[engine] Solution-quality grading polish (flag destructive)" "feature,engine" "$P1" "$E" \
+"Flag needlessly destructive routes; refine clumsy detection.
+**AC:** destructive routes flagged in feedback without failing a valid solve."
+
+E=$(epic "[EPIC] Settings & accessibility" "epic,design" "$P1" \
+"User control over the experience.")
+echo "Settings epic #$E"
+child "[design] Settings: reduced motion, keyboard map, font size, theme, data export" "feature,design" "$P1" "$E" \
+"Accessibility and personalization controls + data export.
+**AC:** all settings persist; data export produces the user's review_log."
+
+#############################################
