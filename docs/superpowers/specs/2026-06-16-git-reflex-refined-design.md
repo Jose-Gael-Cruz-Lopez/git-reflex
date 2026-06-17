@@ -100,3 +100,9 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 25. IndexedDB/localStorage anonymous progress store
 26. Session recap (accuracy, streak, box distribution, weakest tracks)
 
+**EPIC: Landing + interactive hero ⚡** `growth`
+27. Landing page (design-system-driven)
+28. ⚡ Interactive 10-second hero — live drill via shared engine module
+29. ⚡ Disaster-first positioning + copy
+30. "See how it works" demo flow
+
