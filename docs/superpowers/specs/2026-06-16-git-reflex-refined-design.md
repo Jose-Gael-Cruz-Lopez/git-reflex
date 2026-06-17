@@ -152,3 +152,6 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 57. ⚡ Expand the "oh no" disaster track
 58. Solution-quality grading polish (flag destructive routes)
 
+**EPIC: Settings & accessibility** `design`
+59. Settings: reduced motion, keyboard map, font size, theme, data export
+
