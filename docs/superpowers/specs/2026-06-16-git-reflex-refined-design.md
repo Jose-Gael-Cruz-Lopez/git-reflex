@@ -164,3 +164,9 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 63. Route advanced-track problems to the sandbox
 64. Cache results by `(problem, command)`
 
+**EPIC: Leaderboards** `social`
+65. `leaderboard_entries` + per-period schema
+66. Aggregation via Queues/Durable Objects + KV snapshots
+67. `/v1/leaderboard` endpoint
+68. Global & friends boards + Turnstile bot protection
+
