@@ -180,3 +180,7 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 73. Review queue + moderation
 74. Attribution display
 
+**EPIC: PWA & offline** `frontend`
+75. Installable PWA + service worker (app shell + active deck)
+76. Offline review queue (IndexedDB) + replay on reconnect
+
