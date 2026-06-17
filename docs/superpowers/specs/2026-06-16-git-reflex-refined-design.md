@@ -22,3 +22,10 @@ The architectural keystone (from the spec): the git execution engine lives at th
 
 These four refinements layer on top of the existing spec. They target the two weakest dimensions of the original: **grabbing attention** and **bringing people back**.
 
+### 2.1 Disaster-first brand hook `retention-refinement`
+The "oh no" recovery track is promoted from a difficulty-3 afterthought to the **lead narrative**. Positioning shifts from "learn git" to **"when git goes wrong, get it right."**
+- Landing copy and onboarding lead with panic moments developers actually fear.
+- Onboarding offers an optional **"survive a git disaster"** warm-up.
+- Author ~8–10 disaster scenarios: force-push recovery, lost commit via reflog, detached HEAD, committed-to-wrong-branch, hard-reset recovery, bad merge, accidental `git clean`, dropped stash.
+- Cheap to build (mostly content + copy), highest virality ceiling.
+
