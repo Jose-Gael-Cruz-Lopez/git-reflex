@@ -116,3 +116,5 @@ Legend: ⚡ = contains refinement work. Each issue carries its domain/type label
 35. Cloudflare Pages deploy for the SPA
 36. Open-source hygiene: README, LICENSE, CONTRIBUTING
 
+### Phase 1 · Retain
+
