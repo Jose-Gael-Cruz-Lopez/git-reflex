@@ -8,3 +8,10 @@
 
 ---
 
+## Build roadmap
+
+Two parallel tracks. The **backend track** (git engine, data, scheduling, infra) generally leads, because the solve loop can't render without an engine to verify against. The **frontend track** (UI, design system, screens) follows close behind, consuming the engine and APIs. Within each phase, issues are listed in the recommended order to pick them up.
+
+> **Start here (shared foundation — unblocks both tracks):**
+> [#42](../../issues/42) Scaffold React + Vite (+lint/test) → [#43](../../issues/43) Cloudflare Pages deploy → [#44](../../issues/44) OSS hygiene (README/LICENSE/CONTRIBUTING). Epic: [#41](../../issues/41).
+
