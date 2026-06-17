@@ -51,3 +51,10 @@ Practice history renders as **GitHub-style green squares + a heatmap**, derived 
 - **Phase 2 · Grow** — server sandbox, leaderboards, sharing, community content, gauntlet.
 - **Phase 3 · Network** — multiplayer races, team/edu dashboards, community authoring, CLI/extension.
 
+### Labels
+- **Type:** `epic`, `feature`, `chore`, `spike`, `documentation`
+- **Domain:** `engine`, `content`, `frontend`, `infra`, `data`, `design`, `growth`, `social`
+- **Cross-cutting:** `retention-refinement` (the four refinements above)
+
+---
+
