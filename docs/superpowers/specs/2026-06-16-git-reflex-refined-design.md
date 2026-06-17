@@ -43,3 +43,5 @@ Practice history renders as **GitHub-style green squares + a heatmap**, derived 
 
 ---
 
+## 3. Backlog structure
+
