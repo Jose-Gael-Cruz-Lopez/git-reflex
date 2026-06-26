@@ -1,3 +1,4 @@
 - #46 Supabase project + Auth (magic link + GitHub/Google OAuth) — scaffolded (infra/feature)
 - #47 supabase-js client + RLS-guarded reads/writes — scaffolded (data/feature)
 - #48 Anonymous -> account migration (replay review_log) — scaffolded (data/feature)
+- #50 Postgres migrations: all core tables — scaffolded (data/feature)
