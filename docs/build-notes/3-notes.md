@@ -1,1 +1,2 @@
 - #102 Durable Object race rooms + realtime coordination — scaffolded (infra/feature)
+- #103 WS race/:roomId authenticated upgrades + first-to-correct — scaffolded (infra/feature)
