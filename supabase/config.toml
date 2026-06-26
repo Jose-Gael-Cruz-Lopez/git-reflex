@@ -1,0 +1,6 @@
+# Supabase project config (structure-first scaffold).
+# TODO(#37): provision project; TODO(#40): migrations; TODO(#41): RLS policies.
+project_id = "git-reflex"
+
+[db]
+major_version = 15
