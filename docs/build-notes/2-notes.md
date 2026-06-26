@@ -3,3 +3,4 @@
 - #78 /v1/validate broker endpoint — scaffolded (infra/feature)
 - #79 Route advanced-track problems to the sandbox — scaffolded (engine/feature)
 - #80 Cache results by (problem, command) — scaffolded (infra/feature)
+- #82 leaderboard_entries + per-period schema — scaffolded (data/feature)
