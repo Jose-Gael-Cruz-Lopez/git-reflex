@@ -3,3 +3,4 @@
 - #48 Anonymous -> account migration (replay review_log) — scaffolded (data/feature)
 - #50 Postgres migrations: all core tables — scaffolded (data/feature)
 - #51 RLS own-row policies on learner tables — scaffolded (data/feature)
+- #52 Seed content into Postgres — scaffolded (data/chore)
