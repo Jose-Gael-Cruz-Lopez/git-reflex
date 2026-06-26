@@ -7,3 +7,4 @@
 - #53 review_log source-of-truth + user_card_state recompute — scaffolded (data/feature)
 - #55 FSRS memory model — scaffolded (engine/feature)
 - #56 Solve -> FSRS rating mapping — scaffolded (engine/feature)
+- #57 Daily queue construction — scaffolded (engine/feature)
