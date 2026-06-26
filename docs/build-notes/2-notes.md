@@ -7,3 +7,4 @@
 - #83 Aggregation via Queues/Durable Objects + KV snapshots — scaffolded (infra/feature)
 - #84 /v1/leaderboard endpoint — scaffolded (infra/feature)
 - #85 Global & friends boards + Turnstile bot protection — scaffolded (social/feature)
+- #87 Shareable recap card image (R2/Workers) — scaffolded (social/feature)
