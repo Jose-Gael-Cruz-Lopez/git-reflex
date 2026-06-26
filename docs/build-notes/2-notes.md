@@ -2,3 +2,4 @@
 - #77 Sandbox security: allowlist, no network, resource caps, fresh FS — scaffolded (infra/feature)
 - #78 /v1/validate broker endpoint — scaffolded (infra/feature)
 - #79 Route advanced-track problems to the sandbox — scaffolded (engine/feature)
+- #80 Cache results by (problem, command) — scaffolded (infra/feature)
