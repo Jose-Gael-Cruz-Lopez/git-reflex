@@ -1,1 +1,2 @@
 - #76 Cloudflare-brokered isolated git runtime — scaffolded (infra/feature)
+- #77 Sandbox security: allowlist, no network, resource caps, fresh FS — scaffolded (infra/feature)
