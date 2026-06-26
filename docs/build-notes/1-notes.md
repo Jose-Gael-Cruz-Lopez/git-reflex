@@ -1,0 +1,1 @@
+- #46 Supabase project + Auth (magic link + GitHub/Google OAuth) — scaffolded (infra/feature)
