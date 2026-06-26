@@ -9,3 +9,4 @@
 - #56 Solve -> FSRS rating mapping — scaffolded (engine/feature)
 - #57 Daily queue construction — scaffolded (engine/feature)
 - #58 get_due_queue RPC — scaffolded (data/feature)
+- #60 Worker API scaffold: JWT verify (JWKS) + rate limit — scaffolded (infra/feature)
