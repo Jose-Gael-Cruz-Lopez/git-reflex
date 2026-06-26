@@ -1,3 +1,4 @@
 - #102 Durable Object race rooms + realtime coordination — scaffolded (infra/feature)
 - #103 WS race/:roomId authenticated upgrades + first-to-correct — scaffolded (infra/feature)
 - #104 Persist race results — scaffolded (data/feature)
+- #106 Cohort progress dashboard — scaffolded (frontend/feature)
