@@ -1,0 +1,1 @@
+- #2 Spike: wasm-git (libgit2) vs isomorphic-git coverage — scaffolded (engine/spike)
