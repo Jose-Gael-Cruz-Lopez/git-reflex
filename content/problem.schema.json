@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://git-reflex.dev/schemas/problem.json",
+  "title": "Git Reflex Problem",
+  "description": "Structure-first scaffold of the problem schema (#21).",
+  "type": "object",
+  "required": ["id", "track", "prompt", "setup", "goal"],
+  "properties": {
+    "id": { "type": "string" },
+    "track": { "type": "string" },
+    "difficulty": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "prompt": { "type": "string" },
+    "setup": {
+      "type": "array",
+      "description": "Ordered git/file steps that build the starting repo state.",
+      "items": { "type": "string" }
+    },
+    "goal": {
+      "type": "object",
+      "description": "Assertions any passing command sequence must satisfy."
+    },
+    "idiomatic": { "type": "string" }
+  }
+}
