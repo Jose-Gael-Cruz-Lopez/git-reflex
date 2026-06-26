@@ -4,3 +4,4 @@
 - #50 Postgres migrations: all core tables — scaffolded (data/feature)
 - #51 RLS own-row policies on learner tables — scaffolded (data/feature)
 - #52 Seed content into Postgres — scaffolded (data/chore)
+- #53 review_log source-of-truth + user_card_state recompute — scaffolded (data/feature)
