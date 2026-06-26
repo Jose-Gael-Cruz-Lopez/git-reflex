@@ -2,3 +2,4 @@
 - #103 WS race/:roomId authenticated upgrades + first-to-correct — scaffolded (infra/feature)
 - #104 Persist race results — scaffolded (data/feature)
 - #106 Cohort progress dashboard — scaffolded (frontend/feature)
+- #107 Team accounts + roles — scaffolded (infra/feature)
