@@ -2,3 +2,4 @@
 - #3 Build repo from setup[] in a Web Worker — scaffolded (engine/feature)
 - #4 Parse typed input into discrete git invocations — scaffolded (engine/feature)
 - #5 Execute parsed commands against the repo — scaffolded (engine/feature)
+- #6 Goal-assertion evaluator (refs, tree, index, files) — scaffolded (engine/feature)
