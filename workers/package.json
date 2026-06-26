@@ -1,0 +1,11 @@
+{
+  "name": "@git-reflex/workers",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Cloudflare Workers API (edge backend) for Git Reflex.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "$issue": 21,
+  "title": "Problem JSON schema + validator",
+  "milestone": "Phase 0 \u00b7 Prove",
+  "status": "scaffold",
+  "todo": "implement content for #21: Problem JSON schema + validator"
+}

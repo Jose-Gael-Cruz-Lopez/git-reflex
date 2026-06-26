@@ -1,0 +1,8 @@
+# Cloudflare Workers config (structure-first scaffold).
+# TODO(#48): JWT verify (JWKS) + rate limit; bind KV/DO/Queues/R2 as phases land.
+name = "git-reflex-api"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+
+# [[kv_namespaces]]  # TODO(#51): public decks + feature flags
+# [[durable_objects.bindings]]  # TODO(#80): race rooms
