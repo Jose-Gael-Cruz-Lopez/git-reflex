@@ -8,3 +8,4 @@
 - #55 FSRS memory model — scaffolded (engine/feature)
 - #56 Solve -> FSRS rating mapping — scaffolded (engine/feature)
 - #57 Daily queue construction — scaffolded (engine/feature)
+- #58 get_due_queue RPC — scaffolded (data/feature)
