@@ -8,3 +8,4 @@
 - #84 /v1/leaderboard endpoint — scaffolded (infra/feature)
 - #85 Global & friends boards + Turnstile bot protection — scaffolded (social/feature)
 - #87 Shareable recap card image (R2/Workers) — scaffolded (social/feature)
+- #88 'Can you solve it?' challenge cards + deep links — scaffolded (social/feature)
