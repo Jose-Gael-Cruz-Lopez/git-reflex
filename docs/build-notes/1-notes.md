@@ -1,1 +1,2 @@
 - #46 Supabase project + Auth (magic link + GitHub/Google OAuth) — scaffolded (infra/feature)
+- #47 supabase-js client + RLS-guarded reads/writes — scaffolded (data/feature)
