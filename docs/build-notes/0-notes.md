@@ -1,1 +1,2 @@
 - #2 Spike: wasm-git (libgit2) vs isomorphic-git coverage — scaffolded (engine/spike)
+- #3 Build repo from setup[] in a Web Worker — scaffolded (engine/feature)
