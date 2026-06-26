@@ -3,3 +3,4 @@
 - #104 Persist race results — scaffolded (data/feature)
 - #106 Cohort progress dashboard — scaffolded (frontend/feature)
 - #107 Team accounts + roles — scaffolded (infra/feature)
+- #109 Full authoring tools + problem versioning — scaffolded (content/feature)
