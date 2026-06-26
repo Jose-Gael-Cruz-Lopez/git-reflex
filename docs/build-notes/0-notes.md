@@ -3,3 +3,4 @@
 - #4 Parse typed input into discrete git invocations — scaffolded (engine/feature)
 - #5 Execute parsed commands against the repo — scaffolded (engine/feature)
 - #6 Goal-assertion evaluator (refs, tree, index, files) — scaffolded (engine/feature)
+- #7 Solution grading: solved / idiomatic / clumsy — scaffolded (engine/feature)
